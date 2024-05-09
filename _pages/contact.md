@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: post
 title: Concact Me
-permalink: /contact-me/
 ---
 
 Here is how to contact me:

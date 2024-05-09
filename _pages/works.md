@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: home
 title: Works
-permalink: /Works/
 ---
 Here are some of my photos
 

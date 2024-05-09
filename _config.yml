@@ -18,28 +18,42 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Test portfolio page
-email: your-email@example.com
-description:
+title: Roman Aliaskarov
+email: r.aliaskarov@gmail.com
+description: >
+ Portfolio page
 
+# hosting settings
 baseurl: "/my-portfolio" # the subpath of your site, e.g. /blog
 url: "https://raliaskarov.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
 github_username:  raliaskarov
 
+# enable tree of content (see sidebar so see effect)
+toc:
+    enabled: true
+
 # Build settings
-theme: minima
+# theme: minima
+# theme below fits well for long content
+remote_theme: sighingnow/jekyll-gitbook
+toc:
+    enabled: true
+
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
+# customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
+favicon_path:     /assets/gitbook/images/favicon.ico
+
+# here all content stored in folder _pages will have same settings as below
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:path/
+
+# make site to search through following folders
+include:
+    - _pages/
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
